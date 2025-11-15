@@ -1,0 +1,19 @@
+body
+{
+    overflow:hidden;
+    background-color: black;
+}
+#image{
+    height:200px;
+    width:200px;
+    margin-top: 100px;
+    margin-left:120px;
+    display: flexbox;
+    justify-content: center;
+}
+#on{
+    margin-left:-280px;
+}
+#on{
+    margin-right:180px;
+}
