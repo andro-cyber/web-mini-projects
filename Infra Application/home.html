@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- <nav id="navbar">
+        <a href="#" class="logo">Arya Architects</a>
+           <div class="nav-links">
+            <a href="#Architect" class="active">Architect
+
+            </a>
+            <a href="#Contractor">Contractor</a>
+            <a href="#Other_Ideas">Other Ideas</a>
+            <a href="#About">About</a>
+            <a href="#Contact">Contact</a>
+            <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search projects..." id="searchInput">
+                <button class="search-button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+     </div>
+    </nav> -->
+<nav id="navbar">
+  <a href="#" class="logo">Arya Architects</a>
+  <div class="nav-links">
+
+
+    <div class="dropdown">
+      <button class="dropbtn">Architect</button>
+      <div class="dropdown-content">
+        <a href="#">By Size</a>
+        <a href="#">By Area</a>
+        <a href="#">By Bedroom</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Contractor</button>
+      <div class="dropdown-content">
+        <a href="#">Interior</a>
+        <a href="#">Exterior</a>
+        <a href="#">Renovation</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Other Ideas</button>
+      <div class="dropdown-content">
+        <a href="#">Garden</a>
+        <a href="#">Workspace</a>
+        <a href="#">Lighting</a>
+      </div>
+    </div>
+
+    
+    <div class="dropdown">
+      <button class="dropbtn">About</button>
+      <div class="dropdown-content">
+        <a href="#">Our Story</a>
+        <a href="#">Team</a>
+        <a href="#">Careers</a>
+      </div>
+    </div>
+
+   
+    <div class="dropdown">
+      <button class="dropbtn">Contact</button>
+      <div class="dropdown-content">
+        <a href="#">Email</a>
+        <a href="#">Phone</a>
+        <a href="#">Visit Us</a>
+      </div>
+    </div>
+
+    
+    <div class="search-container">
+      <div class="search-bar">
+        <input type="text" placeholder="Search projects..." id="searchInput">
+        <button class="search-button" id="searchButton">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+    <div id="content">
+        <h1 id="head">Welcome to Arya Architects</h1>
+        <p id="para">Your vision, our expertise. Let's build something amazing together.</p>
+    </div>
+   
+       <div class="filter-section">
+        <h2>Filter Projects by Category</h2>
+        <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="residential">Residential</button>
+            <button class="filter-btn" data-filter="commercial">Commercial</button>
+            <button class="filter-btn" data-filter="interior">Interior Design</button>
+            <button class="filter-btn" data-filter="sustainable">Sustainable</button>
+            <button class="filter-btn" data-filter="renovation">Renovation</button>
+        </div>
+    </div>
+    
+    <div id="project">
+        <div class="card" data-category="residential">
+            <a href="product.html">
+            <img src="https://api.makemyhouse.com/public/Media/rimage/1024/completed-project/1759988225_216.jpg?version=latest?version=latest&watermark=true" alt="Project 1"  >
+            </a>
+            <h3>Modern Family Home</h3>
+            <p>A beautiful modern family home with spacious interiors.</p>
+        </div>
+        <div class="card" data-category="commercial">
+            <img src="https://i.pinimg.com/736x/13/1b/03/131b032e6993644039b539123be52d5c.jpg" alt="Project 2">
+            <h3>Corporate Office</h3>
+            <p>Innovative office design for a leading tech company.</p>
+        </div>
+        <div class="card" data-category="interior">
+            <img src="https://i.pinimg.com/736x/b6/83/5f/b6835ff45c435b74a58c5a7855e13c6b.jpg" alt="Project 3">
+            <h3 id="font">Luxury Apartment Interior</h3>
+            <p>Elegant interior design for a high-end apartment.</p>
+        </div>
+        </div>
+        <footer>
+             <div id="info">
+                <h4 id="head">Information</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Complaint & Suggestion</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Intellectual Property</a></li>
+                </ul>
+             </div>
+              <div id="design">
+                <h4 id="prof">Desgin Idea by professional</h3>
+                <ul>
+                    <li><a href="#">Interior Desgin</a></li>
+                    <li><a href="#">Exterior Desgin</a></li>
+                    <li><a href="#">Floorplan</a></li>
+                    <li><a href="#">Walkthrough</a></li>
+                    <li><a href="#">Landscape Desgin</a></li>
+                    <li><a href="#">Engineering Drawing</a></li>
+                </ul>
+             </div>
+                <div id="contact">
+                    <h4 id="Contact">Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Partner with us</a></li>
+                        <li><a href="#">Advertise with us</a></li>
+                        <li><a href="#">Press & Media</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                 <div id="professional">
+                <h4 id="Professional">Professional</h3>
+                <ul>
+                    <li><a href="#">Regsiter Now</a></li>
+                    <li><a href="#">Sell your desgin online</a></li>
+                    <li><a href="#">Showcase your work</a></li>
+                    <li><a href="#">Get Lead</a></li>
+                    <li><a href="#">List As A Supplier</a></li>
+                    <li><a href="#">List As A Contractor</a></li>
+                </ul>
+             </div>
+            <p>&copy; 2024 Arya Architects. All rights reserved.</p>
+           
+
+        </footer>
+
+    
+        <!-- <div class="prcard" data-category="residential">
+            <img src="house2.jpg" alt="Project 4">
+            <h3>Cozy Cottage</h3>
+            <p>A charming cottage nestled in the countryside.</p> -->
+</body>
+</html>

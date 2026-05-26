@@ -1,0 +1,369 @@
+body {
+    background: linear-gradient(135deg, #1e2a38 0%, #2c3e50 100%);
+    color: #ffffff;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+
+#front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+#front::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(42, 157, 244, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+    z-index: -1;
+}
+
+#welcome {
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+    opacity: 0.9;
+    font-size: 4rem;
+    transform: translateZ(20px);
+
+}
+
+#company {
+    font-size: 3.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #d4af37 0%, #f7ef8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: reveal 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards 0.5s;
+    letter-spacing: -0.5px;
+}
+#tagline {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: reveal 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards 1s;
+}
+#getstarted {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e2a38;
+    background: #d4af37;
+    border: none;
+    
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: reveal 1.8s cubic-bezier(0.23, 1, 0.32, 1) forwards 1.5s;
+}
+#service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #d4af37;
+    position: relative;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #d4af37, #f7ef8a);
+    border-radius: 2px;
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #1e2a38;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
+
+#btn {
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  background-color: #d4af37;
+  border: none;
+  color: #1e2a38;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-left: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #d4af37;
+}
+
+
+@keyframes reveal {
+    0% {
+        transform: translateY(30px) scale(0.95);
+        opacity: 0;
+        filter: blur(2px);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+    #front {
+        padding: 1rem;
+        height: 70vh;
+    }
+    
+    #welcome {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #company {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    #tagline {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        padding: 0 1rem;
+    }
+    
+    #getstarted {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+            }
+    
+    #service {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 2.5rem 1rem;
+        margin-top: 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .card h2 {
+        font-size: 1.3rem;
+    }
+    
+    .card p {
+        font-size: 0.9rem;
+    }
+    #sidebar {
+        width: 200px;
+    }
+    
+    #btn {
+        right: -40px;
+        padding: 7px 10px;
+        font-size: 1.2rem;
+    }
+    
+    .links {
+        margin-top: 60px;
+        padding-left: 15px;
+    }
+    
+    .links a {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 575px) {
+    #front {
+        padding: 0.5rem;
+        height: 60vh;
+        justify-content: flex-start;
+        padding-top: 4rem;
+    }
+    
+    #welcome {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+    
+    #company {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.1;
+    }
+#tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+        line-height: 1.4;
+    }
+    
+    #getstarted {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 25px;
+    }
+    
+    #service {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .card {
+        padding: 1.2rem 0.8rem;
+        margin: 0 0.25rem;
+        border-radius: 12px;
+    }
+     #sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    
+    #sidebar.open {
+        transform: translateX(0);
+    }
+    
+    #btn {
+        right: 10px;
+        top: 10px;
+        background-color: #d4af37;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 1.2rem;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .links a {
+        font-size: 1.1rem;
+        margin: 12px 0;
+        padding: 8px 0;
+        width: 90%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
